@@ -6,3 +6,5 @@
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/co1emi11er2/TestHandcalcFunctions.jl?svg=true)](https://ci.appveyor.com/project/co1emi11er2/TestHandcalcFunctions-jl)
 [![Coverage](https://codecov.io/gh/co1emi11er2/TestHandcalcFunctions.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/co1emi11er2/TestHandcalcFunctions.jl)
 [![Coverage](https://coveralls.io/repos/github/co1emi11er2/TestHandcalcFunctions.jl/badge.svg?branch=main)](https://coveralls.io/github/co1emi11er2/TestHandcalcFunctions.jl?branch=main)
+
+Simple functions for testing [Handcalcs.jl](https://github.com/co1emi11er2/Handcalcs.jl)
