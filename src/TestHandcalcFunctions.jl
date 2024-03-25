@@ -1,7 +1,7 @@
 module TestHandcalcFunctions
 
 
-export calc_Ix
+export calc_Ix, calc_Is
 
 function calc_Ix(b, h)
     Ix = b*h^3/12
@@ -29,6 +29,12 @@ end
 function calculate_Ix(b, h)
     Ix = b*h^3/12; "moment of inertia";
     return Ix
+end
+
+function calc_Is(b, h)
+    Ix = calc_Ix(b, h)
+    Iy = calc_Iy(h, b)#, expo=3, denominator=12)
+    return Ix, Iy
 end
 
 end
