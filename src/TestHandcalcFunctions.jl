@@ -1,13 +1,27 @@
 module TestHandcalcFunctions
 
 
-export calc_Ix, calc_Is
+export calc_Ix, calc_Is, calc_Iy, area_rectangle
 
 function calc_Ix(b, h)
     Ix = b*h^3/12
     return Ix
 end
 
+"""
+    calc_Iy(h, b=15; expo=3, denominator=12)
+
+Calculate Iy (second moment of inertia abour the y-axis) of a rectangle.
+
+# Arguments
+- `h`: the height of the rectangle
+- `b`: the width of the rectangle
+- `expo`: the exponent (for testing purposes)
+- `denominator`: the denominator (for testing purposes)
+
+
+
+"""
 function calc_Iy(h, b=15; expo=3, denominator=12)
     Iy = h*b^expo/denominator
     return Iy
