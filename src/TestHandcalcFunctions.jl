@@ -8,6 +8,11 @@ function calc_Ix(b, h)
     return Ix
 end
 
+function calc_Ix(;b, h)
+    Ix = b*h^3/12
+    return Ix
+end
+
 """
     calc_Iy(h, b=15; expo=3, denominator=12)
 
