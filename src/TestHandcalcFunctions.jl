@@ -1,7 +1,7 @@
 module TestHandcalcFunctions
 
 
-export calc_Ix, calc_Is, calc_Iy, area_rectangle
+export calc_Ix, calc_Is, calc_Iy, area_rectangle, sym_function
 
 function calc_Ix(b, h)
     Ix = b*h^3/12
@@ -54,6 +54,10 @@ function calc_Is(b, h)
     Ix = calc_Ix(b, h)
     Iy = calc_Iy(h, b)#, expo=3, denominator=12)
     return Ix, Iy
+end
+
+function sym_function(x)
+    y = x
 end
 
 end

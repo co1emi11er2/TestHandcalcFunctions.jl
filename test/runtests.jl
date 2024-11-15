@@ -11,4 +11,5 @@ using Test
     @test TestHandcalcFunctions.area_rectangle(3, 5) == 15
     @test TestHandcalcFunctions.calculate_Ix(5, 15) == 1406.25
     @test TestHandcalcFunctions.calc_Is(5, 15) == (1406.25, 156.25)
+    @test TestHandcalcFunctions.sym_function(:hello) == :hello
 end
