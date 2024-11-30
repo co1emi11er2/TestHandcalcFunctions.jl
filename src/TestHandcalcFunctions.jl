@@ -60,4 +60,25 @@ function sym_function(x)
     y = x
 end
 
+    module SubA
+        module SubB
+            sub_module_func(a, b) = c = a + b
+        end
+    end
+
+function where_func(a::T, b::S) where {T <:Number,S <: Number}
+    c = a + b
+end
+
+function calc_if_Is(b, h, type)
+    I = if type == :Ix
+        calc_Ix(b, h)
+    else
+        calc_Iy(h, b)
+    end
+
+    return I
+end
+
+
 end
