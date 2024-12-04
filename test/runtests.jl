@@ -18,4 +18,5 @@ using Test
     @test TestHandcalcFunctions.calc_if_Is_1(5, 15, :Ix) == 1406.25
     @test TestHandcalcFunctions.calc_if_Is_2(5, 15, :Ix) == 1406.25
     @test TestHandcalcFunctions.calc_if_Is_2(5, 15, :Iy) == 156.25
+    @test TestHandcalcFunctions.test_function_finder(5, 10) == (50, 15)
 end

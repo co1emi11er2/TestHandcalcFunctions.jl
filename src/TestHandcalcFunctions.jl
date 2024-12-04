@@ -1,7 +1,7 @@
 module TestHandcalcFunctions
 
 
-export calc_Ix, calc_Is, calc_Iy, area_rectangle, sym_function
+export calc_Ix, calc_Iy, calc_Is, area_rectangle, sym_function
 
 function calc_Ix(b, h)
     Ix = b*h^3/12
@@ -61,6 +61,8 @@ function sym_function(x)
 end
 
     module SubA
+
+        sub_module_func(a, b) = c = a * b
         module SubB
             sub_module_func(a, b) = c = a + b
         end
@@ -88,6 +90,14 @@ function calc_if_Is_2(b, h, type)
     end
 
     return I
+end
+
+function test_function_finder(a, b)
+    I = calc_Is(a, b)
+    c1 = SubA.sub_module_func(a, b)
+    c2 = SubA.SubB.sub_module_func(a, b)
+
+    return c1, c2
 end
 
 end
