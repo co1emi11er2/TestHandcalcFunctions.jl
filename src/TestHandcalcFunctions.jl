@@ -62,9 +62,16 @@ end
 
     module SubA
 
-        sub_module_func(a, b) = c = a * b
+        
         module SubB
-            sub_module_func(a, b) = c = a + b
+            sub_module_func(a, b) = c2 = a + b
+        end
+
+        function sub_module_func(a, b) 
+            c1 = a * b
+            c2 = SubB.sub_module_func(a, b)
+
+            return c1, c2
         end
     end
 
@@ -94,8 +101,7 @@ end
 
 function test_function_finder(a, b)
     I = calc_Is(a, b)
-    c1 = SubA.sub_module_func(a, b)
-    c2 = SubA.SubB.sub_module_func(a, b)
+    c1, c2 = SubA.sub_module_func(a, b)
 
     return c1, c2
 end
